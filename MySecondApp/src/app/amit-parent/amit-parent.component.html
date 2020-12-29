@@ -1,0 +1,12 @@
+<p>amit-parent is working now!</p>
+<h1>{{valueFromChild}}</h1>
+<app-amit-child [childProperty1]='parentProperty'
+                [childProperty2]='parentProperty2'
+                (messageEvent)="handleDataFromChild($event)">
+</app-amit-child>
+
+<br><br><br>
+
+<button (click)= "checkTestFlag()" >Invoke home from parent</button>
+<app-home *ngIf="flagValue"></app-home>
+
